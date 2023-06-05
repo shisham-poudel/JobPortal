@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+
+    </script>
+
+  </head>
+  <body>
+    <!-- SlideBar Starts -->
+    <section id="sidebar">
+      <a href="index.html" class="brand">
+        <i class="bx bxs-smile"></i>
+        <span class="text">Adminhub</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="index.html">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-file-find"></i>
+            <span class="text">Vaccancy</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-chat"></i>
+            <span class="text">Applicants</span>
+          </a>
+        </li>
+        <li>
+          <a href="users.html">
+            <i class='bx bx-user'></i>
+            <span class="text"> Manage Users</span>
+          </a>
+        </li>
+    
+        <li>
+          <a href="company.html">
+            <i class="bx bxs-building"></i>
+            <span class="text">Company</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="#">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Setting</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+ <!-------------- SlideBar Ends----------------------->
+
+	<!-- CONTENT -->
+	<section id="content">
+    <!-- Content Header (Page header) -->
+    
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num"></span>
+			</a>
+      <a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon' ></i>
+				<span class="badge"></span>
+			</a>
+
+			<a href="#" class="profile">
+				<img src="logo.png">
+			</a>
+      </nav>
+	  
+      <div class="page">
+
+        <section class="content-header">
+          <h1 style="color: blue;">
+            Dashboard
+          </h1>
+          <ol class="breadcrumb">
+            <li><i class="fa fa-dashboard"></i> Admin</li>
+            <li class="active">Dashboard</li>
+          </ol>
+        </section>
+
+        <section class="content">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-aqua">
+                <div class="inner">
+                  <h3>150</h3>
+    
+                  <p>New Jobs</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-green">
+                <div class="inner">
+                  <h3>53%</h3> 
+                  <p>Bounce Rate</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-yellow">
+                <div class="inner">
+                  <h3>44</h3>
+    
+                  <p>User Registrations</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                  <h3>65</h3> 
+                  <p>Unique Visitors</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+          </div>
+          <!-- /.row -->
+          <!-- Main row -->
+          <div class="row" id="box">
+            <!-- Left col -->
+            <section class="col-lg-12 connectedSortable">
+              
+              <!-- Calendar -->
+              <div class="box box-solid bg-green-gradient col-md-5" >
+                
+                <div id='calendar'></div>
+
+              </div>
+              <!-- /.box -->  
+
+              <!-- TO DO List -->
+              <div class="box box-primary col-md-7">
+                <div class="box-header">
+                  <i class="ion ion-clipboard"></i>
+    
+                  <h3 class="box-title">To Do List</h3>
+    
+                  <div class="box-tools pull-right">
+                    <ul class="pagination pagination-sm inline">
+                      <li><a href="#">&laquo;</a></li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">&raquo;</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                  <ul class="todo-list">
+                    <li>
+                      <!-- drag handle -->
+                          <span class="handle">
+                            <i class="fa fa-ellipsis-v"></i>
+                            <i class="fa fa-ellipsis-v"></i>
+                          </span>
+                      <!-- checkbox -->
+                      <input type="checkbox" value="" name="">
+                      <!-- todo text -->
+                      <span class="text">Design a nice theme</span>
+                      <!-- Emphasis label -->
+                      <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+                      <!-- General tools such as edit or delete-->
+                      <div class="tools">
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-trash-o"></i>
+                      </div>
+                    </li>
+                    <li>
+                          <span class="handle">
+                            <i class="fa fa-ellipsis-v"></i>
+                            <i class="fa fa-ellipsis-v"></i>
+                          </span>
+                      <input type="checkbox" value="" name="">
+                      <span class="text">Make the theme responsive</span>
+                      <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+                      <div class="tools">
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-trash-o"></i>
+                      </div>
+                    </li>
+                    <li>
+                          <span class="handle">
+                            <i class="fa fa-ellipsis-v"></i>
+                            <i class="fa fa-ellipsis-v"></i>
+                          </span>
+                      <input type="checkbox" value="" name="">
+                      <span class="text">Let theme shine like a star</span>
+                      <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+                      <div class="tools">
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-trash-o"></i>
+                      </div>
+                    </li>
+                    <li>
+                          <span class="handle">
+                            <i class="fa fa-ellipsis-v"></i>
+                            <i class="fa fa-ellipsis-v"></i>
+                          </span>
+                      <input type="checkbox" value="" name="">
+                      <span class="text">Let theme shine like a star</span>
+                      <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
+                      <div class="tools">
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-trash-o"></i>
+                      </div>
+                    </li>
+                    <li>
+                          <span class="handle">
+                            <i class="fa fa-ellipsis-v"></i>
+                            <i class="fa fa-ellipsis-v"></i>
+                          </span>
+                      <input type="checkbox" value="" name="">
+                      <span class="text">Check your messages and notifications</span>
+                      <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+                      <div class="tools">
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-trash-o"></i>
+                      </div>
+                    </li>
+                    <li>
+                          <span class="handle">
+                            <i class="fa fa-ellipsis-v"></i>
+                            <i class="fa fa-ellipsis-v"></i>
+                          </span>
+                      <input type="checkbox" value="" name="">
+                      <span class="text">Let theme shine like a star</span>
+                      <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
+                      <div class="tools">
+                        <i class="fa fa-edit"></i>
+                        <i class="fa fa-trash-o"></i>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer clearfix no-border">
+                  <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+                </div>
+              </div>
+              <!-- /.box -->
+    
+            </section>
+
+            <section class="col-lg-12 connectedSortable">
+              <!-- quick email widget -->
+              <div class="box box-info">
+                <div class="box-header">
+                  <i class="fa fa-envelope"></i>
+    
+                  <h3 class="box-title">Quick Email</h3>
+                  <div class="box-footer clearfix ">
+                    <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
+                      <i class="fa fa-arrow-circle-right"></i></button>
+                  </div>
+                </div>
+                <div class="box-body">
+                  <form action="#" method="post">
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="emailto" placeholder="Email to:">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="subject" placeholder="Subject">
+                    </div>
+                    <div>
+                      <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            
+            <!-- /.Left col -->
+            
+          </div>
+          <!-- /.row (main row) -->
+        
+      </div>
+
+		 
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>
